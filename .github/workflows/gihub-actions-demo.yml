@@ -31,7 +31,7 @@ jobs:
     steps:  
       - name: Check out the repo
         uses: actions/checkout@v3
-        
+
       - name: Login to Docker Hub
         uses: docker/login-action@v2
         with:
@@ -41,6 +41,6 @@ jobs:
       - name: Docker build
         uses: docker/build-push-action@v2
         with:
-          working-directory: ./Docker
+          context: ./Docker
           push: True
-          tags: matthisdockers/test:latest,matthisdockers/test:1
+          tags: matthisdockers/test:latest,matthisdockers/test:2
