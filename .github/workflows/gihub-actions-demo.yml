@@ -40,5 +40,4 @@ jobs:
         with:
           context: .
           push: ${{ github.event_name != 'pull_request' }}
-
           tags: matthisdockers/roscontrollogic:latest,matthisdockers/roscontrollogic:${{github.run_number}}
