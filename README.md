@@ -8,7 +8,7 @@ Check out the full article on how to automate docker builds end-to-end: [Brianch
 
 
 Usage
------
+----- 
 
 To create the image `vegasbrianc/docker-hello-world`, execute the following command on the docker-hello-world folder:
 
