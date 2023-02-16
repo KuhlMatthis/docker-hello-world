@@ -35,10 +35,11 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       
+      - name: mouve to docker file
+        run: cd Docker    
+
       - name: Docker build
-       
         uses: docker/build-push-action@v2
         with:
-          context: ./Docker
           push: ${{ github.event_name != 'pull_request' }}
           tags: matthisdockers/roscontrollogic:latest,matthisdockers/roscontrollogic:${{github.run_number}}
