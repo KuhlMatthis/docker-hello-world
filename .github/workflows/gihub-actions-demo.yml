@@ -40,4 +40,4 @@ jobs:
         with:
           working-directory: ./Docker
           push: True
-          tags: matthisdockers/roscontrollogic:latest,matthisdockers/roscontrollogic:1
+          tags: matthisdockers/test:latest,matthisdockers/test:1
