@@ -35,7 +35,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - run: cd ${{ github.workspace }}
-      - run : cd Docker  
+      - run : ls
 
       - name: Docker build
         uses: docker/build-push-action@v2
