@@ -36,6 +36,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Docker build
+        run: ls
         uses: docker/build-push-action@v2
         with:
           context: Docker
