@@ -36,7 +36,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       
       - name: mouve to docker file
-        run: cd github.workspace
+        run: cd ${{ github.workspace }}
         run : cd Docker  
 
       - name: Docker build
