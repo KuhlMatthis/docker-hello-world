@@ -39,3 +39,7 @@ Editing the Hello World File
 ----------------------------
 I've moved the application / logo to the /app directory. Inside of this directory you can edit the index.php file to customize the Hello World message and/or change the logo to your own.
 
+
+DOCKERHUB_USERNAME = matthisdockers
+DOCKERHUB_TOKEN = qSjDqjfwgcg5GJe
+
