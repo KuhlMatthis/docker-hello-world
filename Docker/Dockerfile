@@ -1,4 +1,4 @@
-FROM arm64v8/ros as base
+FROM arm64v8/ros:foxy as base
 
 #RUN apk add --no-cache curl
 
