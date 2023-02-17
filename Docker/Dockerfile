@@ -1,4 +1,4 @@
-FROM nginx:1.20-alpine as base
+FROM arm64v8/ros as base
 
 RUN apk add --no-cache curl
 
