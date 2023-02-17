@@ -1,6 +1,6 @@
 FROM arm64v8/ros as base
 
-RUN apk add --no-cache curl
+#RUN apk add --no-cache curl
 
 WORKDIR /test
 
