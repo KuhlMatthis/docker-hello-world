@@ -37,14 +37,14 @@ on:
 on:
   push:
     branches:
-      - test
-    build-image:
+      - test1
+    test-image:
       name: Run Test on image
       runs-on: ubuntu-latest
       steps: 
         - name: Hello world 
           run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-          
+
         - name: Build and export to Docker
           uses: docker/build-push-action@v2
           with:
