@@ -38,29 +38,29 @@ on:
   push:
     branches:
       - test1
-    test-image:
-      name: Run Test on image
-      runs-on: ubuntu-latest
-      steps: 
-        - name: Hello world 
-          run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+  test-image:
+    name: Run Test on image
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Hello world 
+        run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
 
-        - name: Build and export to Docker
-          uses: docker/build-push-action@v2
-          with:
-            context: ./Docker
-            push: false
-            load: true # Export to Docker Engine rather than pushing to a registry
-            tags: ${{ github.run_id }}
-            cache-from: type=gha
-            cache-to: type=gha,mode=max
-            target: testing
-            
-            platforms: linux/amd64
-
-      - name: Run Trivy for all CVEs (non-blocking)
-        uses: aquasecurity/trivy-action@master
+      - name: Build and export to Docker
+        uses: docker/build-push-action@v2
         with:
-          image-ref: ${{ github.run_id }}
-          exit-code: 0
-          format: table
+          context: ./Docker
+          push: false
+          load: true # Export to Docker Engine rather than pushing to a registry
+          tags: ${{ github.run_id }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          target: testing
+          
+          platforms: linux/amd64
+
+    - name: Run Trivy for all CVEs (non-blocking)
+      uses: aquasecurity/trivy-action@master
+      with:
+        image-ref: ${{ github.run_id }}
+        exit-code: 0
+        format: table
